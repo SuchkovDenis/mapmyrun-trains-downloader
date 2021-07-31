@@ -1,7 +1,7 @@
 # Скрипты для выгрузки тренировок из mapmyrun.com
 
 ## Использование
-Для использования скриптов необходимо авторизоваться на сайте mapmyrun.com и скопировать cookies - они необходимы для запросов.
+Для использования скриптов необходимо авторизоваться на сайте mapmyrun.com и сделать загрузку одной тренировки, посмотрев с какими куками уходит запрос (в Request Headers). Эти куки используем в скриптах `get_train_list.sh` и `download_trains.sh`
 
 В проекте два скрипта:
 
@@ -12,5 +12,5 @@
 
 `download_trains.sh` скачивает тренировки в формате `.tcx` в папку `out`:
 ```bash
-./get_train_list.sh -c "cookie: <cookies с сайта>" -f allWorkouts.txt
+./download_trains.sh -c "cookie: <cookies с сайта>" -f allWorkouts.txt
 ```
